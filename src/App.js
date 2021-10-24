@@ -36,7 +36,7 @@ function App() {
       }
       return setData([]);
     }
-  }, 0);
+  }, []);
   return (
     <div className="container">
       <div className="inputform">
