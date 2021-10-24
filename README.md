@@ -1,6 +1,6 @@
 # My-note
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).Its a simple note app that showcase the use of functional components and hooks
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).Its a simple note app that showcase the use of functional components and hooks for taking down simple notes on the fly
 
 ## Available Scripts
 
