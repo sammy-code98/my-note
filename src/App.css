@@ -1,2 +1,27 @@
-
-
+.container {
+  top: 0;
+  margin: 0;
+  box-sizing: border-box;
+  width: 100vw;
+  height: 100vh;
+}
+.inputform {
+  padding: 50px;
+  margin: auto;
+}
+.note-input {
+  width: 80%;
+  padding: 10px;
+  border-radius: 12px;
+  border: 1px solid grey;
+}
+.note-input:focus {
+  outline: none;
+}
+.btn{
+  padding: 10px;
+  border-radius: 12px;
+  border: none;
+  margin: 20px;
+  cursor: pointer;
+}
