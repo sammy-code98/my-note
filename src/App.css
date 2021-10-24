@@ -1,9 +1,11 @@
+@import url("https://fonts.googleapis.com/css2?family=Zen+Kurenaido&display=swap");
 .container {
   top: 0;
   margin: 0;
   box-sizing: border-box;
   width: 100vw;
   height: 100vh;
+  font-family: "Zen Kurenaido", sans-serif;
 }
 .inputform {
   padding: 50px;
@@ -14,14 +16,45 @@
   padding: 10px;
   border-radius: 12px;
   border: 1px solid grey;
+  font-family: 'Zen Kurenaido', sans-serif;
 }
 .note-input:focus {
   outline: none;
 }
-.btn{
+.btn {
   padding: 10px;
   border-radius: 12px;
   border: none;
   margin: 20px;
   cursor: pointer;
+  font-family: 'Zen Kurenaido', sans-serif;
+}
+.note-card {
+  margin-top: 20px;
+  margin-left: 20px;
+  margin-right: 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+.card {
+  margin: 20px;
+  padding: 10px;
+  height: auto;
+  text-align: center;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+
+/* media queries */
+@media screen and (max-width: 480px) {
+ 
+  .btn{
+    width: 85%;
+    margin: 25px  auto;
+  }
+  .note-card{
+    display: flex;
+    flex-direction: column;
+    margin-top: -30px;
+  }
 }

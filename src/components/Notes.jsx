@@ -2,8 +2,8 @@ import React from 'react'
 
 function Notes(props) {
     return (
-        <div>
-            {props.data.map(note => <div>{note.text}</div>)}
+        <div className="note-card">
+            {props.data.map(note => <div  className="card">{note.text}</div>)}
         </div>
     )
 }
