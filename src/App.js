@@ -1,10 +1,10 @@
 import "./App.css";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Note from "./components/Notes.jsx";
 import produce from "immer";
 
 function App() {
-  const initialData = [{ text: "hello" }, { text: "emma" }];
+  const initialData = [{ text: "Loading Notes....." }];
   const [data, setData] = useState(initialData);
 
   // method
@@ -18,12 +18,25 @@ function App() {
       });
       // reset input value to null
       document.querySelector("#noteInput").value = "";
+
+      // push input values to local storage
+      if (typeof window !== "undefined") {
+        localStorage.setItem("data", JSON.stringify(nextState));
+      }
       // now call the setData function here
       setData(nextState);
     }
-
-    console.log(text);
   };
+  useEffect(() => {
+    // check if data exist in local storage
+    if (typeof window !== "undefined") {
+      const getData = localStorage.getItem("data");
+      if (getData !== "" && getData !== null) {
+        return setData(JSON.parse(getData));
+      }
+      return setData([]);
+    }
+  }, 0);
   return (
     <div className="container">
       <div className="inputform">
